@@ -2,47 +2,91 @@
 using namespace std;
 
 int main(){
-
-    // to print hollow diamond pattern
-    //       *
-    //     *    *
-    //   *        *
-    // *            *
-    //   *        *
-    //     *    *
-    //       *
+    // to print butterfly pattern
     
-    int x;
-    cout<<"size of daimond: ";
-    cin>>x;
+//     // to print hollow diamond pattern
+//     //        *
+//     //       * *
+//     //      *   *
+//     //     *     *
+//     //      *   *
+//     //       * *
+//     //        *
+
+//     int x;
+//     cout<<"size of daimond: ";
+//     cin>>x;
     
-    for (int i=0 ; i<x ; i++){
-        for (int k=x-i-1;k>0;k--){
-            cout<<"  ";
-        }
-        cout<<"*";
-        for (int j=0; j<i ;j++){
-            cout<<"    ";
-        }
-        if (i>0){         
-        cout<<"*";}
-        cout<<endl;
-    }
+//     for (int i=0 ; i<x ; i++){
+//         for (int k=x-i-1 ; k>0 ; k--){
+//             cout<<" ";
+//         }
+//         cout<<"*";
+//         if (i!=0){
+//             for (int j=0; j<2*i-1 ;j++){
+//                 cout<<" ";}
+//             cout<<"*";
+//         }
 
-    for (int i=1 ; i<x ; i++){
-        for (int k=0 ; k<i ; k++){
-            cout<<"  ";
-        }
-        cout<<"*";
+        
+//         cout<<endl;
+//     }
 
-        for (int j=x-i-1; j>0 ;j--){
-            cout<<"    ";
-        }
-        if (i<x-1){         
-        cout<<"*";}
-        cout<<endl;
+//     for (int i=0 ; i<x-1 ; i++){
+//         for (int k=0 ; k<i+1 ; k++){
+//             cout<<" ";
+//         }
+//         cout<<"*";
+//         if (i!= x-2){
+//         for (int j=0 ; j<2*(x-i)-5 ;j++){
+//             cout<<" ";
+//         }
+                
+//         cout<<"*";
+        
+//     }cout<<endl;
+// }
 
-    }
+    // // to print hollow diamond pattern
+    // //       *
+    // //     *    *
+    // //   *        *
+    // // *            *
+    // //   *        *
+    // //     *    *
+    // //       *
+    
+    // int x;
+    // cout<<"size of daimond: ";
+    // cin>>x;
+    
+    // for (int i=0 ; i<x ; i++){
+    //     for (int k=x-i-1;k>0;k--){
+    //         cout<<"  ";
+    //     }
+    //     cout<<"*";
+    //     for (int j=0; j<i ;j++){
+    //         cout<<"    ";
+    //     }
+    //     if (i>0){         
+    //     cout<<"*";}
+    //     cout<<endl;
+    // }
+
+    // for (int i=1 ; i<x ; i++){
+    //     for (int k=0 ; k<i ; k++){
+    //         cout<<"  ";
+    //     }
+    //     cout<<"*";
+
+    //     for (int j=x-i-1; j>0 ;j--){
+    //         cout<<"    ";
+    //     }
+    //     if (i<x-1){         
+    //     cout<<"*";}
+    //     cout<<endl;
+
+    // }
 
     // // to print pyramid pattern
     // //    1
