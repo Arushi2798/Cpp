@@ -3,6 +3,20 @@ using namespace std;
 
 int main(){
     // to print butterfly pattern
+    int x=4;
+    for(int i=0;i<x+1;i++){
+        for (int j=0;j<i;j++){
+            cout<<"*";
+        }
+        for (int k=x-i;k>0;k--){
+            cout<<"%";
+        }
+        // for (int k=;k>;k--){
+        //     cout<<"%";
+        // }
+
+        cout<<endl;
+    }
     
 //     // to print hollow diamond pattern
 //     //        *

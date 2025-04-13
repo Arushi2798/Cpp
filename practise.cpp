@@ -1,11 +1,49 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    // //basic practise
-    for (int n=4;n<=10;n++){
-        cout<<n<<" ";
+int hello(){
+    cout<<"hello guys";
+    return 4;
+}
+
+int min(int a , int b){
+    return( a>b ? b : a);
+}
+
+int sum(int a){
+    int s=0;
+    for(int i=1 ; i<=a ; i++){
+        s+=i;
     }
+    return s;
+
+}
+
+int factorial(int a){
+    int s=1;
+    for(int i=a ; i>1 ; i--){
+        s*=i;
+    }
+    return s;
+
+}
+
+int main(){
+
+    // function practise
+    // cout << endl << hello() << endl;
+    // int a, b;
+    // cin>>a>>b;
+    // cout<<min(a,b);
+    int a ;
+    cin>>a;
+    // cout<<sum(a);
+    cout<<factorial(a);
+
+    // //basic practise
+    // for (int n=4;n<=10;n++){
+    //     cout<<n<<" ";
+    // }
     
     // int n=0;
     // while (n < 5){
@@ -13,7 +51,7 @@ int main(){
     //     n++;
         
     // }
-    cout<<endl;
+    // cout<<endl;
 
     // char a='a';
     // cout<< (a>=65 && a <=90 ?"upper":"lower")<<endl;
@@ -43,6 +81,6 @@ int main(){
     // int newprice= price;
     // cout<< newprice<<"\n";
     
-    system("pause"); 
+    // system("pause"); 
     return 0;
 }
