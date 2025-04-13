@@ -28,6 +28,62 @@ int factorial(int a){
 
 }
 
+int digitsum(int a){
+    int digsum=0;
+    while (a >0){
+        int r=a%10;
+        a=a/10;
+        digsum+=r;
+    }
+    return digsum;
+}
+
+int bicoef(int n, int r ){
+    int ncr= factorial(n)/(factorial(r)*factorial(n-r));
+    return ncr;
+}
+
+bool isprime(int a){
+    bool isprime = true;
+    for (int i = 2 ; i < a ; i++){
+        if(a%i==0){
+            isprime= false;
+            break;
+    }
+}
+
+    return isprime;
+}
+
+int allprime(int a){
+    if(a==2){
+        return 0;
+    }
+    else if(a==3){
+        return(2);
+    }
+    else{
+        // cout<<1<<' ';
+        for (int i = 2 ; i <a ; i++){
+            int res = isprime(i);
+            if (res==1){
+                cout<<i<<" ";
+            }
+        }
+    }
+}
+
+void fibo(int n){
+    int a=1,b=1;
+    cout<<a<<" "<<b<<" ";
+    for(int i=2;i<n;i++){
+        int s=b+a;
+        a=b;
+        b=s;
+        cout<<s<<" ";
+    }
+}
+
 int main(){
 
     // function practise
@@ -35,10 +91,16 @@ int main(){
     // int a, b;
     // cin>>a>>b;
     // cout<<min(a,b);
-    int a ;
+    int a,b ;
     cin>>a;
+    // cin>>a>>b;
     // cout<<sum(a);
-    cout<<factorial(a);
+    // cout<<factorial(a);
+    // cout<<digitsum(a);
+    // cout<<bicoef(a,b);
+    // cout<<isprime(a);
+    // cout<<allprime(a);
+    fibo(a);
 
     // //basic practise
     // for (int n=4;n<=10;n++){
