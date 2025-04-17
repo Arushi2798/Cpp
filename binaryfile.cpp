@@ -1,17 +1,18 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main(){
     int n;
-    string reminder;
+    int power = 1;
     cin>>n;
-    while (n!=0){
+    int ans=0;
+    while (n>0){
         int r = n%2;
         n=n/2;
-        cout << r ;
+        ans+=r*power ;
+        power+=10;
     }
-    // cout << r ;
+    cout << ans ;
     return 0;
     // return 0;
 }
