@@ -1,0 +1,43 @@
+    use this code in case of 
+            Changes from your original tasks.json
+Aspect	                Your Old Setup	                                New Setup
+🔧 Task Type	        cppbuild (debugger auto-gen)	            shell (manual, more control)
+🧩 Just builds	        Compiles only	                            Builds AND runs
+🧵 Execution	        Doesn't auto-run .exe	                    Automatically runs the compiled .exe
+📋 Output	            May run in external terminal or nothing	    Runs directly in VS Code terminal
+🛠 Modular tasks	     Single task	                            Uses dependsOn to separate build/run cleanly
+🧑‍💻 Manual run needed	    Must run .exe manually after build	        It builds and runs in one step
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build and Run C++ file (in terminal)",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Builds and runs the active C++ file using g++",
+            "dependsOn": ["Run Executable"]
+        },
+        {
+            "label": "Run Executable",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}.exe",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "shared"
+            }
+        }
+    ]
+}
