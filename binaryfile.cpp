@@ -1,18 +1,25 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    int n;
+// decimal to binary
+int binarytodecimal(int n){
     int power = 1;
-    cin>>n;
     int ans=0;
     while (n>0){
         int r = n%2;
         n=n/2;
-        ans+=r*power ;
-        power+=10;
+
+        ans+=(r*power) ;
+        power*=10;
     }
-    cout << ans ;
+    cout<< ans;
+}
+
+int main(){
+    int n;
+    cin>>n;
+    // binarytodecimal(n);
+    
+    
     return 0;
-    // return 0;
 }
