@@ -2,7 +2,7 @@
 using namespace std;
 
 // decimal to binary
-int binarytodecimal(int n){
+int decimaltobinary(int n){
     int power = 1;
     int ans=0;
     while (n>0){
@@ -15,11 +15,24 @@ int binarytodecimal(int n){
     cout<< ans;
 }
 
+int binarytodecimal(int n){
+    int pow=1, ans=0;
+    while (n>0){
+    int r=n%10;
+    n/=10;
+
+    r=r*pow;
+    pow*=2;
+    ans+=r;
+    }
+    cout<< ans;
+}
+
 int main(){
     int n;
     cin>>n;
-    // binarytodecimal(n);
-    
+    // decimaltobinary(n);
+    binarytodecimal(n);
     
     return 0;
 }
